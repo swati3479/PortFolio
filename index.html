@@ -1,239 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swati Kumari | Portfolio</title>
-  <meta name="description" content="Portfolio of Swati Kumari - Frontend Developer, Open Source Contributor, C++/Java Programmer.">
-  <meta name="keywords" content="Swati Kumari, Portfolio, Frontend Developer, C++, Java, IGDTUW, Open Source, Web Developer">
-  <meta property="og:title" content="Swati Kumari | Portfolio">
-  <meta property="og:description" content="Frontend Developer | Open Source Contributor | Problem Solver">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Swati Kumari – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
 </head>
-
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Swati Kumari</h1>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#timeline">Timeline</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="actions">
-        <button id="mode-toggle">🌙</button>
-        <a href="SwatiKumari_IGDTUW.pdf" download class="resume-btn">Download CV</a>
-      </div>
-    </nav>
-  </header>
+  <nav class="navbar">
+    <h1 class="logo">Swati Kumari</h1>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#courses" class="nav-link">Courses</a></li>
+      <li><a href="#timeline" class="nav-link">Timeline</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="actions">
+      <button id="mode-toggle">🌙</button>
+      <a href="SwatiKumari_IGDTUW.pdf" download class="resume-btn">Download CV</a>
+    </div>
+  </nav>
 
-  <!-- Hero Section -->
   <section id="home" class="hero fade-in">
     <div class="hero-text">
-      <h2>Hi, I'm <span class="highlight">Swati Kumari</span></h2>
-      <p class="typing">Frontend Developer | Open Source Contributor | Problem Solver</p>
+      <h1>Hi, I'm <span class="highlight">Swati Kumari</span></h1>
+      <h2>Frontend Developer | Open Source Contributor | Problem Solver</h2>
       <p class="hero-intro">
-        A passionate Computer Science Engineering (AI) student at IGDTUW, Delhi.  
-        Skilled in <strong>Frontend Development</strong>, <strong>C++/Java</strong>, and enthusiastic about  
-        <strong>open-source contributions, competitive coding, and building scalable applications.</strong>
+        A passionate Computer Science Engineering (AI) student at IGDTUW, Delhi.
+        Skilled in <strong>Frontend Development</strong>,
+        <strong>C++/Java</strong>, and enthusiastic about
+        <strong>open-source contributions, competitive coding, and building scalable
+          applications.</strong>
       </p>
       <div class="social-links">
-        <a href="https://github.com/swati3479"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/-kumariswati/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://leetcode.com/u/swatiwebdev01/"><i class="fas fa-code"></i></a>
-        <a href="https://www.geeksforgeeks.org/user/swati010bqw8w/"><i class="fas fa-laptop-code"></i></a>
+        <a
+          href="https://github.com/swati3479"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://leetcode.com/u/swatiwebdev01/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fas fa-code"></i
+        ></a>
+        <a
+          href="https://www.geeksforgeeks.org/user/swati010bqw8w/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fas fa-laptop-code"></i
+        ></a>
       </div>
     </div>
     <div class="hero-img">
-      <img src="portfolio_image.jpg" alt="Swati Kumari">
+      <img src="portfolio_image.jpg" alt="Swati Kumari" />
     </div>
   </section>
 
-  <!-- Quick Stats -->
-  <section class="highlights fade-in">
-    <div class="highlight-card">🌟 GSoC 2024 Contributor</div>
-    <div class="highlight-card">📈 27K+ LinkedIn Impressions</div>
-    <div class="highlight-card">🎓 CGPA 8.04 (B.Tech CSE-AI)</div>
-    <div class="highlight-card">💻 200+ Coding Problems Solved</div>
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Science Engineering (AI) student at IGDTUW with a strong passion
+      for <strong>web development, open-source contribution, and problem-solving</strong>.
+      I love building impactful projects and collaborating with communities.
+    </p>
+    <p>
+      My journey includes contributing to <strong>Google Summer of Code 2024</strong>, creating projects
+      like <strong>IGDTUW CGPA Calculator</strong> and <strong>Music World</strong> that gained significant
+      online reach, and consistently improving my coding skills through
+      <strong>LeetCode & GeeksforGeeks</strong>.
+    </p>
+    <p>
+      I aim to leverage my skills in <strong>Frontend Development</strong> and
+      <strong>Computer Science fundamentals</strong> to solve real-world problems, while continuously learning
+      and contributing to the tech ecosystem.
+    </p>
   </section>
 
-  <section id="about" class="fade-in">
-  <h2>About Me</h2>
-  <p>
-    I am a Computer Science Engineering (AI) student at IGDTUW with a strong passion for 
-    <strong>web development, open-source contribution, and problem-solving</strong>. 
-    I love building impactful projects and collaborating with communities.
-  </p>
-  <p>
-    My journey includes contributing to <strong>Google Summer of Code 2024</strong>, 
-    creating projects like <strong>IGDTUW CGPA Calculator</strong> and <strong>Music World</strong> 
-    that gained significant online reach, and consistently improving my coding skills through 
-    <strong>LeetCode & GeeksforGeeks</strong>.
-  </p>
-  <p>
-    I aim to leverage my skills in <strong>Frontend Development</strong> and 
-    <strong>Computer Science fundamentals</strong> to solve real-world problems, 
-    while continuously learning and contributing to the tech ecosystem.
-  </p>
-</section>
-
-
-  <!-- Skills with Progress -->
   <section id="skills" class="fade-in">
     <h2>Skills</h2>
     <div class="skills-container">
       <div class="skills-category">
-        <h3>💻 Hard Skills</h3>
-        <div class="progress-bar"><span style="width:90%">HTML/CSS/JS</span></div>
-        <div class="progress-bar"><span style="width:80%">C++</span></div>
-        <div class="progress-bar"><span style="width:75%">Java</span></div>
-        <div class="progress-bar"><span style="width:85%">Git & GitHub</span></div>
-        <div class="progress-bar"><span style="width:70%">OOPs/DBMS/OS/CN</span></div>
+        <h3>Hard Skills</h3>
+        <ul class="skills-list">
+          <li>HTML, CSS, JavaScript</li>
+          <li>Java</li>
+          <li>Data Structures & Alogrithms</li>
+          <li>Github</li>
+          <li>Vercel</li>
+          <li>WordPress</li>
+        </ul>
       </div>
       <div class="skills-category">
-        <h3>🤝 Soft Skills</h3>
-        <div class="progress-bar"><span style="width:95%">Communication</span></div>
-        <div class="progress-bar"><span style="width:90%">Problem Solving</span></div>
-        <div class="progress-bar"><span style="width:100%">Team Collaboration</span></div>
-        <div class="progress-bar"><span style="width:80%">Analytical Thinking</span></div>
-        <div class="progress-bar"><span style="width:100%">Time Management</span></div>
+        <h3>Soft Skills</h3>
+        <ul class="skills-list">
+          <li>Time Management</li>
+          <li>Analytical Thinking</li>
+          <li>Strong Communication</li>
+          <li>Leadership</li>
+          <li>Problem Solving</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects" class="fade-in">
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
         <h3>IGDTUW CGPA Calculator</h3>
-        <p>Responsive web app built with HTML, CSS, JS. Achieved 27K+ impressions on LinkedIn.</p>
+        <p>
+          Responsive web app built with HTML, CSS, JS. Achieved 27K+ impressions on LinkedIn.
+        </p>
         <div class="project-links">
-          <a href="https://swati3479.github.io/IGDTUW-CGPA-Calculator/" target="_blank">🔗 Live Demo</a>
-          <a href="https://github.com/swati3479/IGDTUW-CGPA-Calculator" target="_blank">💻 GitHub</a>
+          <a
+            href="https://github.com/swati3479/IGDTUW-CGPA-Calculator"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://swati3479.github.io/IGDTUW-CGPA-CALCULATOR/"
+            target="_blank"
+            >Live Demo</a
+          >
         </div>
       </div>
       <div class="project-card">
         <h3>Music World</h3>
         <p>Responsive music player with playlist creation, deployed via Vercel.</p>
         <div class="project-links">
-          <a href="https://music-world.vercel.app" target="_blank">🔗 Live Demo</a>
-          <a href="https://github.com/swati3479/Music-World" target="_blank">💻 GitHub</a>
+          <a href="https://github.com/swati3479/musicworld" target="_blank"
+            >GitHub</a
+          >
+          <a href="https://musicworld-pearl.vercel.app/" target="_blank"
+            >Live Demo</a
+          >
         </div>
       </div>
       <div class="project-card">
-        <h3>PadConnect Prototype(Ideathon Project)</h3>
+        <h3>PadConnects</h3>
         <p>Community platform concept for emergency chat, donations & menstrual health info.</p>
         <div class="project-links">
-          <a href="https://swati3479.github.io/PadConnects/" target="_blank">🔗 Live Demo</a>
-          <a href="https://github.com/swati3479/PadConnects/" target="_blank">💻 GitHub</a>
+          <a href="https://github.com/swati3479/PadConnects" target="_blank"
+            >GitHub</a
+          >
+          <a href="https://swati3479.github.io/PadConnects/" target="_blank"
+            >Live Demo</a
+          >
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Typing Speed Test</h3>
+        <p>A web app to test typing speed, accuracy, and errors in real-time.</p>
+        <div class="project-links">
+          <a href="https://github.com/swati3479/Typing-Speed-Test-" target="_blank"
+            >GitHub</a
+          >
+          <a href="https://swati3479.github.io/Typing-Speed-Test-/" target="_blank"
+            >Live Demo</a
+          >
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Courses & Certifications Section -->
-<section id="courses" class="fade-in">
-  <h2>Courses & Certifications</h2>
-  <p>Here are some of the professional courses and certifications I have completed:</p>
-  <div class="course-grid">
-    <div class="course-card">
-      <h3>Software Testing & Development (PMKVY)</h3>
-      <p>Scored <strong>85%</strong> – Covered SDLC, programming basics, and testing fundamentals.</p>
-      <a href="pmkvy_certificate.pdf" target="_blank" class="cert-btn">📄 View Certificate</a>
+  <section id="courses" class="fade-in">
+    <h2>Courses & Certifications</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>Tech Mahindra Software Development</h3>
+        <p>
+          Scored <strong>85%</strong> – Covered SDLC, programming basics, and testing fundamentals.
+          MS Office, email writing, business communication, and interview prep.
+        </p>
+        <a href="techmahindra_certificate.pdf" target="_blank" class="cert-btn">📄 View Certificate</a>
+      </div>
+      <div class="course-card">
+        <h3>Google Cloud Computing Foundations</h3>
+        <p>
+          Completed an <strong>8-week course</strong> on cloud computing fundamentals with hands-on labs.
+          Scored <strong>72%</strong>.
+        </p>
+        <a href="Google Cloud Computing Foundations.pdf" target="_blank" class="cert-btn"
+          >📄 View Certificate</a
+        >
+      </div>
+      <div class="course-card">
+        <h3>Pradhan Mantri Kaushal Vikas Yojana</h3>
+        <p>
+          Completed <strong>6-month PMKVY ‘Software Developer Associate’ course</strong> with <strong>86%</strong> score, gaining hands-on skills in software development and programming.
+        </p>
+      </div>
     </div>
-    <div class="course-card">
-      <h3>IT Skills & Communication (Tech Mahindra Foundation)</h3>
-      <p>MS Office, email writing, business communication, and interview prep.</p>
-      <a href="techmahindra_certificate.pdf" target="_blank" class="cert-btn">📄 View Certificate</a>
-    </div>
-    <div class="course-card">
-      <h3>Google Cloud Computing Foundation (NPTEL)</h3>
-      <p>
-        Completed an <strong>8-week course</strong> on cloud computing fundamentals with hands-on labs.  
-        Scored <strong>72%</strong>. This course provided insights into Google Cloud architecture,  
-        storage, networking, and deployment.
-      </p>
-      <a href="gcp_certificate.pdf" target="_blank" class="cert-btn">📄 View Certificate</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- Timeline -->
   <section id="timeline" class="fade-in">
-    <h2>Education & Experience</h2>
+    <h2>Education Timeline</h2>
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-date">2024 – Present</div>
         <div class="timeline-content">
-          <h3>B.Tech, CSE (AI)</h3>
-          <p>IGDTUW – 8.04 SGPA</p>
+          <h3>IGDTUW – 8.04 SGPA</h3>
+          <p>B.Tech - Computer Science Engineering (AI)</p>
         </div>
       </div>
       <div class="timeline-item">
         <div class="timeline-date">2021 – 2024</div>
         <div class="timeline-content">
-          <h3>Diploma, Computer Engineering</h3>
-          <p>DSEU Shakarpur – 8.5 GPA</p>
+          <h3>DSEU Shakarpur – 8.5 GPA</h3>
+          <p>Diploma - Computer Engineering</p>
         </div>
       </div>
       <div class="timeline-item">
         <div class="timeline-date">2021</div>
         <div class="timeline-content">
-          <h3>Matriculation</h3>
-          <p>Govt. Girls Sr. Sec. School – 87.6%</p>
+          <h3>Govt. Girls Sr. Sec. School – 87.6%</h3>
+          <p>Secondary Education</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Achievements Section -->
-<section id="achievements" class="fade-in">
-  <h2>Achievements</h2>
-  <div class="achievement-grid">
-    <div class="achievement-card">
-      🌟 Selected Contributor – Google Summer of Code (Extended Edition) 2024
-    </div>
-    <div class="achievement-card">
-      📈 27K+ Impressions & 13K+ Reach on LinkedIn project promotion
-    </div>
-    <div class="achievement-card">
-      🏅 Scored 85% in Software Testing & Development (PMKVY)
-    </div>
-    <div class="achievement-card">
-      💡 Built and deployed impactful web applications with 1K+ users
-    </div>
-    <div class="achievement-card">
-      🎉 Proud Achievement: Google Cloud Computing Foundation 🎉  
-      <br>
-      Completed via NPTEL with <strong>72% score</strong> after 8 weeks of learning & hands-on labs.
-    </div>
-  </div>
-</section>
-
   <section id="contact" class="fade-in">
-  <h2>Contact Me</h2>
-  <p>Let’s connect! You can reach me through any of the following:</p>
-  <div class="contact-links">
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=swati010btcseai24@igdtuw.ac.in&su=Portfolio%20Contact&body=Hi%20Swati%2C%0A%0AI%20wanted%20to%20connect%20with%20you..." 
-   target="_blank" class="email-btn">
-   📧 Send Email
-</a>
+    <h2>Get In Touch</h2>
+    <div class="contact-links">
+      <a
+        href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=swati010btcseai24@igdtuw.ac.in&amp;su=Portfolio%20Contact&amp;body=Hi%20Swati%2C%0A%0AI%20wanted%20to%20connect%20with%20you..."
+        class="contact-btn email-btn"
+        > <i class="fas fa-envelope"></i> Email Me</a
+      >
+      <a
+        href="https://www.linkedin.com/in/-kumariswati/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-btn"
+        ><i class="fab fa-linkedin"></i> LinkedIn</a
+      >
+      <a
+        href="https://github.com/swati3479"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-btn"
+        ><i class="fab fa-github"></i> GitHub</a
+      >
+    </div>
+  </section>
 
-    <a href="https://www.linkedin.com/in/-kumariswati/" target="_blank" class="contact-btn">💼 LinkedIn</a>
-    <a href="https://github.com/swati3479" target="_blank" class="contact-btn">🌐 GitHub</a>
-  </div>
-</section>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
