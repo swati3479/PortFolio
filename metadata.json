@@ -1,0 +1,6 @@
+{
+  "name": "Portfolio by AI",
+  "description": "A world-class product designer portfolio template",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
