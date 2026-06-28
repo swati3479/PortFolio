@@ -105,6 +105,16 @@ export const data: PortfolioData = {
       category: "Web Development",
       githubUrl: "https://github.com/swati3479/IGDTUW-CGPA-CALCULATOR",
       liveUrl: "https://igdtuw-cgpa-calculator.vercel.app/",
+    },
+    {
+      id: "project-6",
+      title: "Personal Developer Portfolio",
+      description: "A modern, responsive personal portfolio built with React, TypeScript, and Tailwind CSS. Features smooth Framer Motion animations, dynamic data rendering, and a working contact form.",
+      image: "/portfolio_cover.jpg",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      category: "Web Development",
+      githubUrl: "https://github.com/swati3479/PortFolio",
+      liveUrl: "https://swati-portfolio-sigma.vercel.app",
     }
   ],
   experience: [

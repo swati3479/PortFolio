@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Briefcase, GraduationCap, MapPin } from "lucide-react";
 import { motion } from "motion/react";
 import { data } from "../../data";
 import { Section } from "../layout/Section";
@@ -11,13 +11,13 @@ export function Experience() {
         {/* Experience Timeline */}
         <div>
           <h3 className="text-2xl font-bold font-display mb-8 flex items-center gap-3">
-            <span className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm">
-              â¼
+            <span className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+              <Briefcase className="w-5 h-5" />
             </span>
             Work Experience
           </h3>
           
-          <div className="space-y-12 relative before:absolute before:inset-0 before:ml-4 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-border before:to-transparent">
+          <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-border before:to-transparent">
             {data.experience.map((exp, i) => (
               <motion.div 
                 key={exp.id}
@@ -25,9 +25,11 @@ export function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative flex items-center justify-between group"
+                className="relative flex items-start justify-between group"
               >
-                <div className="flex items-center justify-center w-8 h-8 rounded-full border-4 border-background bg-primary absolute left-0 -translate-x-1/2 z-10 shrink-0" />
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-background bg-primary text-primary-foreground absolute left-0 -translate-x-1/2 z-10 shrink-0 mt-1.5 shadow-sm group-hover:scale-110 transition-transform">
+                  <Briefcase className="w-4 h-4" />
+                </div>
                 
                 <div className="w-[calc(100%-4rem)] ml-auto p-6 rounded-2xl bg-card border border-border shadow-sm group-hover:border-primary/50 transition-colors">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
@@ -37,9 +39,9 @@ export function Experience() {
                     </span>
                   </div>
                   <div className="text-primary font-medium mb-4">{exp.company}</div>
-                  <ul className="space-y-2 text-muted-foreground text-sm list-disc list-inside mb-4">
+                  <ul className="space-y-2 text-muted-foreground text-sm list-outside ml-4 mb-4">
                     {exp.description.map((item, idx) => (
-                      <li key={idx} className="leading-relaxed">{item}</li>
+                      <li key={idx} className="leading-relaxed list-disc pl-1">{item}</li>
                     ))}
                   </ul>
                   {exp.certificateUrl && (
@@ -62,13 +64,13 @@ export function Experience() {
         {/* Education Timeline */}
         <div>
           <h3 className="text-2xl font-bold font-display mb-8 flex items-center gap-3">
-            <span className="w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center text-sm">
-              â¼
+            <span className="w-10 h-10 rounded-full bg-foreground/5 text-foreground flex items-center justify-center">
+              <GraduationCap className="w-5 h-5" />
             </span>
             Education
           </h3>
           
-          <div className="space-y-12 relative before:absolute before:inset-0 before:ml-4 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-border before:to-transparent">
+          <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-border before:to-transparent">
             {data.education.map((edu, i) => (
               <motion.div 
                 key={edu.id}
@@ -76,9 +78,11 @@ export function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative flex items-center justify-between group"
+                className="relative flex items-start justify-between group"
               >
-                <div className="flex items-center justify-center w-8 h-8 rounded-full border-4 border-background bg-foreground absolute left-0 -translate-x-1/2 z-10 shrink-0" />
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-background bg-foreground text-background absolute left-0 -translate-x-1/2 z-10 shrink-0 mt-1.5 shadow-sm group-hover:scale-110 transition-transform">
+                  <GraduationCap className="w-4 h-4" />
+                </div>
                 
                 <div className="w-[calc(100%-4rem)] ml-auto p-6 rounded-2xl bg-card border border-border shadow-sm group-hover:border-foreground/50 transition-colors">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">

@@ -9,18 +9,38 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    const subject = encodeURIComponent(`Portfolio Contact from ${formState.name}`);
-    const body = encodeURIComponent(`Name: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}`);
-    window.location.href = `mailto:${data.personal.email}?subject=${subject}&body=${body}`;
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${data.personal.email}`, {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+          _subject: `Portfolio Contact from ${formState.name}`
+        })
+      });
 
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    setFormState({ name: "", email: "", message: "" });
-    setTimeout(() => setIsSuccess(false), 3000);
+      if (response.ok) {
+        setIsSuccess(true);
+        setFormState({ name: "", email: "", message: "" });
+        setTimeout(() => setIsSuccess(false), 3000);
+      } else {
+        alert("Oops! Something went wrong. Please try again or email me directly.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Oops! Something went wrong. Please try again or email me directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

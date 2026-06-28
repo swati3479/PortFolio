@@ -1,7 +1,7 @@
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useState, useEffect } from "react";
 import { data } from "../../data";
-import { Menu, X, Moon, Sun, Terminal } from "lucide-react";
+import { Menu, X, Moon, Sun, Terminal, Github, Linkedin, Twitter, Mail, Code } from "lucide-react";
 
 export function Navbar({ toggleTheme, isDark, onOpenCmd }: { toggleTheme: () => void, isDark: boolean, onOpenCmd: () => void }) {
   const { scrollY } = useScroll();
@@ -27,6 +27,16 @@ export function Navbar({ toggleTheme, isDark, onOpenCmd }: { toggleTheme: () => 
     { name: "Contact", href: "#contact" },
   ];
 
+  const getIcon = (iconName: string) => {
+    switch (iconName.toLowerCase()) {
+      case 'github': return <Github className="w-5 h-5" />;
+      case 'linkedin': return <Linkedin className="w-5 h-5" />;
+      case 'twitter': return <Twitter className="w-5 h-5" />;
+      case 'leetcode': return <Code className="w-5 h-5" />;
+      default: return <Mail className="w-5 h-5" />;
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
@@ -36,12 +46,7 @@ export function Navbar({ toggleTheme, isDark, onOpenCmd }: { toggleTheme: () => 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center gap-2">
-            <div className="w-8 h-8 bg-foreground text-background rounded flex items-center justify-center font-bold font-mono">
-              {data.personal.name.charAt(0)}
-            </div>
-            <span className="font-display font-bold text-xl tracking-tight hidden sm:block">
-              {data.personal.name}
-            </span>
+            {/* Logo removed */}
           </div>
           
           <nav className="hidden md:flex space-x-8">
@@ -63,6 +68,20 @@ export function Navbar({ toggleTheme, isDark, onOpenCmd }: { toggleTheme: () => 
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
               Available for new opportunities
+            </div>
+            <div className="hidden md:flex items-center gap-2 border-r border-border pr-2">
+              {data.socials.map((social) => (
+                <a
+                  key={social.platform}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full hover:bg-secondary text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label={social.platform}
+                >
+                  {getIcon(social.icon)}
+                </a>
+              ))}
             </div>
             <button
               onClick={toggleTheme}
@@ -110,6 +129,20 @@ export function Navbar({ toggleTheme, isDark, onOpenCmd }: { toggleTheme: () => 
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
               Available for new opportunities
+            </div>
+            <div className="mx-3 mt-4 flex items-center gap-4 pt-4 border-t border-border">
+              {data.socials.map((social) => (
+                <a
+                  key={social.platform}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full hover:bg-secondary text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label={social.platform}
+                >
+                  {getIcon(social.icon)}
+                </a>
+              ))}
             </div>
           </div>
         </motion.div>
